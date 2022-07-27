@@ -7,7 +7,7 @@ public class Calc {
         //double result = res(readOperation);
         //System.out.println("Result is" + result);
     }
-}
+
     public static double readNumber() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter Value");
@@ -18,7 +18,7 @@ public class Calc {
         System.out.println("1 is + ;2 is - ;3 is * ; 4 is / \n Choose opration");
         double numberOperation =0;
             return scan.nextDouble();
-        switch numberOperation() {
+        switch (numberOperation) {
             case 1:
                 return firstValue + secondValue;
             case 2:
@@ -26,11 +26,11 @@ public class Calc {
             case 3:
                 return firstValue*secondValue;
             case 4:
-                if secondValue !==0
-                    return firstValue/secondValue;
-                else
+                if (secondValue ==0) {
+                    return firstValue / secondValue;
+                } else {
                     System.out.println(" Zero diving is unable!");
-                    readNumber();
+                    readNumber(); }
             default: readOperation();
 
 
